@@ -8,7 +8,7 @@ namespace DataTalksFrontendExercise.Services
         BaseCardModel GetLoremIpsumModelLong { get; }
         BaseCardModel GetLoremIpsumModelShort { get; }
 
-        Task Copy(int id);
+        Task Duplicate(int id);
         Task Delete(int id);
         Task Dismiss(int id);
         List<BaseCardModel> GetList();

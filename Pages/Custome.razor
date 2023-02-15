@@ -1,3 +1,34 @@
-﻿@page "/page2"
+﻿@using DataTalksFrontendExercise.Components;
+@using DataTalksFrontendExercise.Dto;
+@using DataTalksFrontendExercise.Services;
+
+@page "/page2"
+
+@code {
+    [Inject]
+    private IBaseCardService baseCardService { get; set; } = null!;
+}
+
+<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModel" HolderClass="color-full" />
+
+<div class="notify-test">
+    <BaseCard BaseCardModel="baseCardService.GetLoremIpsumModel" HolderStyle="opacity:.85;" />
+</div>
+
+@*This are test components that implement different use cases with custome class and style externaly added to component*@
+@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelLong" HolderClass="base-diff" HolderStyle="margin:16px;" />*@
+@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelShort" HolderStyle="margin:24px 24px;" />*@
 
 
+<style>
+    .color-full {
+        background: cyan !important;
+        border: 4px dashed #00b3b3;
+    }
+
+    .notify-test {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+</style>

@@ -11,17 +11,20 @@ namespace DataTalksFrontendExercise.Services
 
         public async Task Delete(int id)
         {
-
+            Console.WriteLine($"Delete card with id:{id}");
+            await Task.CompletedTask;
         }
 
         public async Task Dismiss(int id)
         {
-
+            Console.WriteLine($"Dismis card with id:{id}");
+            await Task.CompletedTask;
         }
 
-        public async Task Copy(int id)
+        public async Task Duplicate(int id)
         {
-
+            Console.WriteLine($"Duplicate card with id:{id}");
+            await Task.CompletedTask;
         }
 
 
@@ -31,6 +34,7 @@ namespace DataTalksFrontendExercise.Services
             var res = new List<BaseCardModel>();
             var elemntLen = r.Next(10, 40);
 
+            //I could use try/catch 
             for (int i = 0; i < elemntLen; i++)
             {
                 var type = r.Next(i, 100);
@@ -48,7 +52,7 @@ namespace DataTalksFrontendExercise.Services
 
         public BaseCardModel GetLoremIpsumModelShort => new BaseCardModel()
         {
-            Title = "Short title",
+            Title = "Short-Title",
             Description = $"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere sollicitudin. Consectetur adipiscing elit pellentesque habitant morbi tristique. Nunc vel risus commodo viverra maecenas accumsan lacus vel. ",
             Icon = ""
         };
@@ -63,7 +67,7 @@ namespace DataTalksFrontendExercise.Services
 
         public BaseCardModel GetLoremIpsumModelLong => new BaseCardModel()
         {
-            Title = "This is a card's title as long as it can get, so there can be large number of chars in here!Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
+            Title = "Long-This is a card's title as long as it can get, so there can be large number of chars in here!Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit",
             Description = $"{text_Helper}|{text_Helper}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere sollicitudin. Consectetur adipiscing elit pellentesque habitant morbi tristique. Nunc vel risus commodo viverra maecenas accumsan lacus vel. Montes nascetur ridiculus mus mauris vitae ultricies leo. Fames ac turpis egestas sed tempus urna. Urna condimentum mattis pellentesque id. Tristique nulla aliquet enim tortor. Et tortor consequat id porta. Duis convallis convallis tellus id interdum velit laoreet id donec. Nulla aliquet enim tortor at auctor urna nunc. Non arcu risus quis varius quam quisque. Sollicitudin aliquam ultrices sagittis orci a. Vulputate sapien nec sagittis aliquam. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Consectetur purus ut faucibus pulvinar elementum. Lorem ipsum dolor sit amet.",
             //Icon = "https://picsum.photos/200/300",
             Icon = "https://picsum.photos/seed/picsum/200/300"
