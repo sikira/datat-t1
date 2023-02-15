@@ -146,3 +146,37 @@
     font-size: 16px;
     font-style: normal;
 }
+
+    .btn-dismiss:hover {
+        background: var(--data-red-dark);
+    }
+
+@media (max-width: 640.98px) {
+    /* I assume that for mobile version of side, card would be vertically align, there can be more improvements but this is just for showcase  */
+    .main-content {
+        display: block;
+    }
+
+    .image-holder {
+        padding: 12px 32px;
+        width: 90%;
+    }
+
+        .image-holder img {
+            overflow: clip;
+        }
+
+    .description {
+        text-align: justify;
+        padding-left: 8px;
+    }
+
+    .base-holder {
+        min-width: unset;
+        height: auto;
+    }
+
+    .footer {
+        margin-top: 12px;
+    }
+}
