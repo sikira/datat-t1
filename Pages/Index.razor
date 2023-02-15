@@ -1,0 +1,18 @@
+﻿@using DataTalksFrontendExercise.Components;
+@using DataTalksFrontendExercise.Dto;
+@using DataTalksFrontendExercise.Services;
+
+@page "/"
+
+@code {
+    [Inject]
+    private IBaseCardService baseCardService { get; set; }
+}
+
+
+
+<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModel" />
+
+@*This are test components that implement different use cases with custome class and style externaly added to component*@
+@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelLong" HolderClass="base-diff" HolderStyle="margin:16px;" />*@
+@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelShort" HolderStyle="margin:24px 24px;" />*@

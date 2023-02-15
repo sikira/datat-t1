@@ -1,0 +1,46 @@
+﻿@page "/page1"
+@using DataTalksFrontendExercise.Services;
+@using DataTalksFrontendExercise.Components;
+@using DataTalksFrontendExercise.Dto;
+
+@inject IBaseCardService baseCardService ;
+
+@code {
+
+    List<BaseCardModel> allCards = new();
+
+    public FlexPage()
+    {
+
+    }
+
+    protected override void OnInitialized()
+    {
+        allCards = baseCardService.GetList();
+    }
+
+}
+
+<div class="main-flex-holder">
+    @foreach (var item in allCards)
+    {
+        <BaseCard BaseCardModel="@item" HolderClass="flex-test" />
+    }
+</div>
+
+
+
+
+
+<style>
+    .main-flex-holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flex-test {
+        flex: 1;
+        margin:4px;
+    }
+</style>
+
