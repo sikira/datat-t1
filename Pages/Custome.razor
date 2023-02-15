@@ -7,23 +7,22 @@
 @code {
     [Inject]
     private IBaseCardService baseCardService { get; set; } = null!;
-}
 
-<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModel" HolderClass="color-full" />
+
+}
+@*This are test components that implement different use cases with custome class and style externaly added to component*@
+
+<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelColor" HolderClass="color-full" />
 
 <div class="notify-test">
     <BaseCard BaseCardModel="baseCardService.GetLoremIpsumModel" HolderStyle="opacity:.85;" />
 </div>
 
-@*This are test components that implement different use cases with custome class and style externaly added to component*@
-@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelLong" HolderClass="base-diff" HolderStyle="margin:16px;" />*@
-@*<BaseCard BaseCardModel="baseCardService.GetLoremIpsumModelShort" HolderStyle="margin:24px 24px;" />*@
-
-
 <style>
     .color-full {
-        background: cyan !important;
-        border: 4px dashed #00b3b3;
+        background: #00b3b3 !important;
+        border: 4px dashed #026b6b;
+        color: #f2f4f5 !important;
     }
 
     .notify-test {

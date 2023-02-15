@@ -5,6 +5,7 @@ namespace DataTalksFrontendExercise.Services
     public interface IBaseCardService
     {
         BaseCardModel GetLoremIpsumModel { get; }
+        BaseCardModel GetLoremIpsumModelColor { get; }
         BaseCardModel GetLoremIpsumModelLong { get; }
         BaseCardModel GetLoremIpsumModelShort { get; }
 
