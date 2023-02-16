@@ -152,7 +152,7 @@
     }
 
 @media (max-width: 640.98px) {
-    /* I assume that for mobile version of side, card would be vertically align, there can be more improvements but this is just for showcase  */
+    /* I assume that for mobile version of side, card would be vertically align, there can be more improvements ( mouse click on mobile for submenu ...etc ) but this is just for showcase  */
     .main-content {
         display: block;
     }
